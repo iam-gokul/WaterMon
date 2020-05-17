@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.gokul.watermon.ui.autolocation.ViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.autolocation.AutoLocation">
+        <LinearLayout
+            android:id="@+id/top_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_top_sheet_dialog_fragment">
+
+            <TextView
+                android:id="@+id/district_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:paddingTop="30dp"
+                android:text="District"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="40dp"></TextView>
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:paddingTop="20dp"
+                android:text="state"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_below="@id/top_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qualityparameter_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_light"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="Quality"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/longestriver_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_light"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="Longest River"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/ph_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_light"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="pH(min)"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/temp_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_light"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
+                android:text="temperature"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/rubik_light"
+                android:paddingTop="20dp"
+                android:text="Remarks"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</layout>
