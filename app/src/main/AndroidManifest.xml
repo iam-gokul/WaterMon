@@ -11,10 +11,9 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.manualocation.ManualLocation"></activity>
+        <activity android:name=".ui.insights.InsightActivity"></activity>
+        <activity android:name=".ui.manualocation.ManualLocation" />
         <activity android:name=".ui.autolocation.AutoLocation" />
-        <activity android:name=".ui.AutoLocationActivity" />
-        <activity android:name=".ui.ManualLocationActivity" />
         <activity android:name=".ui.landing.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

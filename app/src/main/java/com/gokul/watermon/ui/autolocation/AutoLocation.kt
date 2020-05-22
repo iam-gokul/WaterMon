@@ -3,6 +3,7 @@ package com.gokul.watermon.ui.autolocation
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.*
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import android.util.Log
 import com.gokul.watermon.R
 import com.gokul.watermon.data.model.WaterModel
 import com.gokul.watermon.data.network.AutoLocation.Companion.MIN_DISTANCE
+import com.gokul.watermon.ui.insights.InsightActivity
 import com.gokul.watermon.ui.landing.MainActivity
 import java.lang.Exception
 import java.util.*
@@ -30,6 +32,7 @@ class AutoLocation : AppCompatActivity() {
 
     }
     private var context: Context? = null
+    var quality_intent : String = "Fluoride"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,9 +85,10 @@ class AutoLocation : AppCompatActivity() {
                     for(model in models!!){
                         if(model.district.equals(district?.toUpperCase())) {
                             qualityparameter_tv.text="Quality: "+model.quality
+                            quality_intent= model.quality.toString()
                             longestriver_tv.text = "Longest River : "+model.river
                             ph_tv.text = "Max Ph :" + model.maxPh+" Min Ph : "+model.minPh
-                            temp_tv.text = "Max temp: "+ model.maxTemp + " Min Temp : "+model.minTemp
+                            temp_tv.text = "Max temp: "+ "38" + " Min Temp : "+model.minTemp
                         }
                     }
 
@@ -103,6 +107,11 @@ class AutoLocation : AppCompatActivity() {
             override fun onProviderDisabled(provider: String?) {
             }
 
+        }
+        insights.setOnClickListener(){
+            val intent = Intent(this, InsightActivity::class.java)
+            intent.putExtra("quality",quality_intent )
+            startActivity(intent)
         }
 
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(

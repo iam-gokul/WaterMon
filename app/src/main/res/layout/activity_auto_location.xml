@@ -113,9 +113,19 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="20dp" />
+            <Button
+                android:id="@+id/insights"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="INSIGHTS"
+                android:fontFamily="@font/rubik_light"
+                android:background="@color/cardview_dark_background"/>
 
 
         </LinearLayout>
+
 
 
 
